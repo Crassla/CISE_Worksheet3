@@ -13,4 +13,7 @@ app.get('/api/item/:slug', (req, res) => {
   res.end(`Item: ${slug}`);
 });
 
+const path = require("path")
+process.env['NODE_CONFIG_DIR'] = path.join(path.resolve("./"),"config/")
+
 module.exports = app;
