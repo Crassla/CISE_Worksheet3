@@ -2,7 +2,7 @@
 
 const express = require('express');
 console.log("Before conn")
-const connectDB = require('config/db');
+const connectDB = require('/config/db');
 console.log("After conn")
 const cors = require('cors');
 
