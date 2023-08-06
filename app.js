@@ -1,7 +1,9 @@
 // app.js
 
 const express = require('express');
-
+console.log("Before conn")
+const connectDB = require('config/db');
+console.log("After conn")
 const cors = require('cors');
 
 // routes
@@ -10,7 +12,7 @@ const books = require('./routes/api/books');
 const app = express();
 
 // Connect Database
-
+connectDB();
 
 // cors
 app.use(cors({ origin: true, credentials: true }));
